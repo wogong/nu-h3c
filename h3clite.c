@@ -136,7 +136,13 @@ static void authentication()
 						ushort eap_handle_identity(uchar* buf, ushort len);
 						len = eap_handle_identity(buf, len);
 					}
-					else if (eap_type == EAP_TYPE_MD5)
+                    else if (eap_type == EAP_TYPE_ALLOCATED)
+                    {
+                        fprintf(stderr, "EAP Request Allocated\n");
+                        ushort eap_handle_allocated(uchar* buf, ushort len);
+                        len = eap_handle_allocated(buf, len);
+                    }
+                    else if (eap_type == EAP_TYPE_MD5)
 					{
 						fprintf(stderr, "EAP Request MD5\n");
 						ushort eap_handle_md5(uchar* buf, ushort len);
@@ -200,10 +206,18 @@ void main(int argc, char *argv[])
 	authentication();
 }
 
-//For SHNU 2013
+//For N*U*D*T 2016
 ushort eap_handle_identity(uchar* buf, ushort len)
 {
-	strcpy(buf, "\x06\x07PTNYR0ZTYCZ/GUs4dAEqL1xl/r8=\x20\x20");
+	strcpy(buf, "\x15\x04\xac\x12\xc9\xe9\x06\x07\x61WNbGB9RNnIrT0tnJgN6ez/25XQ=\x20\x20");
+	strcat(buf, g_username);
+	return strlen(buf);
+}
+
+ushort eap_handle_allocated(uchar* buf, ushort len)
+{
+	strcpy(buf, "\x06");
+	strcat(buf, g_password);
 	strcat(buf, g_username);
 	return strlen(buf);
 }
