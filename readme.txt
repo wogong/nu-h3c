@@ -21,7 +21,8 @@ H3C Lite 轻量级 H3C 802.1x 校园网认证 Linux/OpenWRT 客户端
         - OpenWRT 12.09，硬件 RG100A：<http://downloads.openwrt.org/attitude_adjustment/12.09/brcm63xx/generic/OpenWrt-Toolchain-brcm63xx-for-mips-gcc-4.6-linaro_uClibc-0.9.33.2.tar.bz2>
         - OpenWRT 14.07，硬件 TP-Link WR720n：<https://downloads.openwrt.org/barrier_breaker/14.07/ar71xx/generic/OpenWrt-Toolchain-ar71xx-for-mips_34kc-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2> 
     2. 将解压后的 `bin/` 加入环境变量 $PATH
-    3. mips-openwrt-linux-gcc h3clite.c -std=c99 -o h3clite
+    3. `mips-openwrt-linux-gcc h3clite.c -std=c99 -o h3clite`
+    4. 将 h3clite 直接复制到路由器中，添加可执行权限 `chmod +x h3clite`，测试认证是否成功
 
 ## 定制
 
