@@ -35,3 +35,5 @@ H3C Lite 轻量级 H3C 802.1x 校园网认证 Linux/OpenWRT 客户端
 3. 使用多播方式触发 EAPOL 请将 `s_broadcast_addr` 修改为 `01-80-c2-00-00-03`。
 4. 某些协议会使用其它的 Request type，如用编号 7 的 ALLOCATED 代替 MD5，需要修改 `authentication` 中间相应部分。
 
+## 致谢
+本项目 fork 自 gmsj0001/shnu-h3c，略作修改已配合作者环境使用。感谢原作者 @gmsj0001。
