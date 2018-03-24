@@ -26,7 +26,7 @@ H3C Lite 轻量级 H3C 802.1x 校园网认证 Linux/OpenWRT 客户端
 
 ## 定制
 
-本项目适用于 NU** 2016 版协议。欢迎有技术基础的朋友 fork 项目以定制自己学校的版本。一些要点：
+本项目适用于 NUDT 2016 版协议。欢迎有技术基础的朋友 fork 项目以定制自己学校的版本。一些要点：
 
 1. 大部分情况只需修改文件末尾的 `eap_handle_identity` 函数。对于不同版本的 iNode，
 请用 wireshark/tcpdump 抓包得到新的数据替换 `eap_handle_identity` 中的 base64 字串。
@@ -36,4 +36,4 @@ H3C Lite 轻量级 H3C 802.1x 校园网认证 Linux/OpenWRT 客户端
 4. 某些协议会使用其它的 Request type，如用编号 7 的 ALLOCATED 代替 MD5，需要修改 `authentication` 中间相应部分。
 
 ## 致谢
-本项目 fork 自 gmsj0001/shnu-h3c，略作修改已配合作者环境使用。感谢原作者 @gmsj0001。
+本项目 fork 自 gmsj0001/shnu-h3c，略作修改以配合作者环境使用。感谢原作者 @gmsj0001。
