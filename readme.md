@@ -1,5 +1,7 @@
 H3C Lite 轻量级 H3C 802.1x 校园网认证 Linux/OpenWRT 客户端
 
+更新：2021-01-22 网络认证改为网页认证，已无需此项目，故存档。
+
 ## 特点
 
 轻量精简，单文件，源代码 5K，编译后仅 10K。使用原生 RAW socket，无需安装 Python（YaH3C 与 OH3C）、libpcap（njit-client）等任何支持库，便于部署到路由器中。同时，代码便于阅读。
